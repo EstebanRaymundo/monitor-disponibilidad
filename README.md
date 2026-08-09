@@ -10,4 +10,4 @@ Programa en Python que verifica sitios web y APIs, clasifica errores de conexió
 Instalación de la dependencia:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install requests
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
