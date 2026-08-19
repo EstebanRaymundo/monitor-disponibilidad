@@ -1,0 +1,30 @@
+name: Keepalive del monitor
+
+on:
+  schedule:
+    - cron: "17 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generar actividad mensual
+        run: |
+          git config user.name "monitor-bot"
+          git config user.email "monitor-bot@users.noreply.github.com"
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > data/keepalive.txt
+          git add data/keepalive.txt
+          git commit -m "keepalive: $(date -u +%FT%TZ)"
+          git pull --rebase --autostash
+          git push
