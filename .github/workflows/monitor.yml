@@ -28,7 +28,8 @@ jobs:
 
       - name: Ejecutar verificaciones
         run: python monitor.py
-            - name: Copiar estado para GitHub Pages
+
+      - name: Copiar estado para GitHub Pages
         run: |
           mkdir -p docs
           cp data/status.json docs/status.json
