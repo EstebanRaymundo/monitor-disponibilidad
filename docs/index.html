@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitor de disponibilidad</title>
+</head>
+<body>
+  <h1>Monitor de disponibilidad</h1>
+
+  <p id="ultima-ejecucion">Cargando estado...</p>
+  <p id="cantidad-verificaciones"></p>
+
+  <script>
+    fetch("status.json")
+      .then((respuesta) => {
+        if (!respuesta.ok) {
+          throw new Error("No se pudo cargar el estado.");
+        }
+
+        return respuesta.json();
+      })
+      .then((estado) => {
+        document.getElementById("ultima-ejecucion").textContent =
+          `Última ejecución UTC: ${estado.generated_at}`;
+
+        document.getElementById("cantidad-verificaciones").textContent =
+          `Verificaciones en la última ejecución: ${estado.services.length}`;
+      })
+      .catch(() => {
+        document.getElementById("ultima-ejecucion").textContent =
+          "El estado aún no está disponible.";
+      });
+  </script>
+</body>
+</html>

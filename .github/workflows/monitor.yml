@@ -28,12 +28,16 @@ jobs:
 
       - name: Ejecutar verificaciones
         run: python monitor.py
+            - name: Copiar estado para GitHub Pages
+        run: |
+          mkdir -p docs
+          cp data/status.json docs/status.json
 
       - name: Guardar resultados
         run: |
           git config user.name "monitor-bot"
           git config user.email "monitor-bot@users.noreply.github.com"
-          git add data/
+          git add data/ docs/status.json
           git diff --staged --quiet || git commit -m "checks: $(date -u +%FT%TZ)"
           git pull --rebase --autostash
           git push
