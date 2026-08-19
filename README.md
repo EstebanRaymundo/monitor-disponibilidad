@@ -1,13 +1,28 @@
 # Monitor de disponibilidad
 
-Programa en Python que verifica sitios web y APIs, clasifica errores de conexión y guarda cada verificación en SQLite.
+Monitor de sitios web y APIs hecho con Python. Verifica la disponibilidad de servicios, clasifica fallos de red y publica el estado actual en una página pública.
 
-## Requisitos
+## Página pública
 
-- Python 3.12 o superior
-- Librería `requests`
+[Ver estado actual](https://estebanraymundo.github.io/monitor-disponibilidad/)
 
-Instalación de la dependencia:
+El archivo de estado público está disponible en:
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+[status.json](https://estebanraymundo.github.io/monitor-disponibilidad/status.json)
+
+## Servicios monitoreados
+
+- Google
+- GitHub
+- Wikipedia
+- Python
+- OpenAI
+
+La lista se encuentra en `services.json`.
+
+## Automatización
+
+GitHub Actions ejecuta el monitor automáticamente con este cron:
+
+```text
+3-59/5 * * * *
