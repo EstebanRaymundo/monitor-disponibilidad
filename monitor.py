@@ -1,7 +1,7 @@
 import json
 import logging
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -12,6 +12,7 @@ ARCHIVO_SERVICIOS = CARPETA_PROYECTO / "services.json"
 CARPETA_DATOS = CARPETA_PROYECTO / "data"
 ARCHIVO_CHECKS = CARPETA_DATOS / "checks.jsonl"
 ARCHIVO_ESTADO = CARPETA_DATOS / "status.json"
+CARPETA_ARCHIVO = CARPETA_DATOS / "archive"
 
 TIMEOUT_SEGUNDOS = 5
 
@@ -95,6 +96,50 @@ def cargar_servicios():
     return servicios
 
 
+def rotar_checks_antiguos():
+    if not ARCHIVO_CHECKS.exists():
+        return
+
+    limite = datetime.now(timezone.utc) - timedelta(days=30)
+    checks_recientes = []
+    checks_por_mes = {}
+
+    with ARCHIVO_CHECKS.open(encoding="utf-8") as archivo:
+        for linea in archivo:
+            if not linea.strip():
+                continue
+
+            check = json.loads(linea)
+            fecha_check = datetime.fromisoformat(check["checked_at"])
+
+            if fecha_check < limite:
+                nombre_mes = fecha_check.strftime("%Y-%m")
+                checks_por_mes.setdefault(nombre_mes, []).append(check)
+            else:
+                checks_recientes.append(check)
+
+    if not checks_por_mes:
+        logging.info("No hay verificaciones antiguas para archivar.")
+        return
+
+    CARPETA_ARCHIVO.mkdir(parents=True, exist_ok=True)
+
+    for nombre_mes, checks in checks_por_mes.items():
+        archivo_mes = CARPETA_ARCHIVO / f"{nombre_mes}.jsonl"
+
+        with archivo_mes.open("a", encoding="utf-8") as archivo:
+            for check in checks:
+                archivo.write(json.dumps(check, ensure_ascii=False) + "\n")
+
+    with ARCHIVO_CHECKS.open("w", encoding="utf-8") as archivo:
+        for check in checks_recientes:
+            archivo.write(json.dumps(check, ensure_ascii=False) + "\n")
+
+    logging.info(
+        "Se archivaron %s verificaciones antiguas.",
+        sum(len(checks) for checks in checks_por_mes.values()),
+    )
+
 def guardar_checks(nuevos_checks):
     CARPETA_DATOS.mkdir(exist_ok=True)
 
@@ -114,6 +159,7 @@ def main():
     logging.info("Iniciando monitor de disponibilidad.")
 
     servicios = cargar_servicios()
+    rotar_checks_antiguos()
     nuevos_checks = []
     estado_actual = []
 
