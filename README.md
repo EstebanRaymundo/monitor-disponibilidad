@@ -20,9 +20,9 @@ El archivo de estado público está disponible en:
 
 La lista se encuentra en `services.json`.
 
-## Automatización
+## Automatización e Intervalo Real
 
-GitHub Actions ejecuta el monitor automáticamente con este cron:
+GitHub Actions ejecuta el monitor automáticamente mediante un evento `schedule` con la siguiente expresión cron (minutos impares para evitar congestión):
 
 ```text
 3-59/5 * * * *
