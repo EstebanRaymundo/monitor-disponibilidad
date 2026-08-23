@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-23T14:03:09+00:00",
+  "generated_at": "2026-08-23T14:57:51+00:00",
   "services": [
     {
       "id": "google",
       "name": "Google",
       "url": "https://www.google.com",
       "service_id": "google",
-      "checked_at": "2026-08-23T14:03:08+00:00",
+      "checked_at": "2026-08-23T14:57:51+00:00",
       "status_code": 200,
       "response_ms": 93,
       "ok": true,
@@ -17,9 +17,9 @@
       "name": "GitHub",
       "url": "https://github.com",
       "service_id": "github",
-      "checked_at": "2026-08-23T14:03:08+00:00",
+      "checked_at": "2026-08-23T14:57:51+00:00",
       "status_code": 200,
-      "response_ms": 320,
+      "response_ms": 126,
       "ok": true,
       "error": null
     },
@@ -28,9 +28,9 @@
       "name": "Wikipedia",
       "url": "https://www.wikipedia.org",
       "service_id": "wikipedia",
-      "checked_at": "2026-08-23T14:03:08+00:00",
+      "checked_at": "2026-08-23T14:57:51+00:00",
       "status_code": 200,
-      "response_ms": 125,
+      "response_ms": 33,
       "ok": true,
       "error": null
     },
@@ -39,9 +39,9 @@
       "name": "Python",
       "url": "https://www.python.org",
       "service_id": "python",
-      "checked_at": "2026-08-23T14:03:09+00:00",
+      "checked_at": "2026-08-23T14:57:51+00:00",
       "status_code": 200,
-      "response_ms": 75,
+      "response_ms": 25,
       "ok": true,
       "error": null
     },
@@ -50,9 +50,9 @@
       "name": "OpenAI",
       "url": "https://openai.com",
       "service_id": "openai",
-      "checked_at": "2026-08-23T14:03:09+00:00",
+      "checked_at": "2026-08-23T14:57:51+00:00",
       "status_code": 200,
-      "response_ms": 148,
+      "response_ms": 92,
       "ok": true,
       "error": null
     }
