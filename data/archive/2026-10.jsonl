@@ -1,0 +1,5 @@
+{"service_id": "google", "checked_at": "2026-10-01T02:21:25+00:00", "status_code": 200, "response_ms": 198, "ok": true, "error": null}
+{"service_id": "github", "checked_at": "2026-10-01T02:21:25+00:00", "status_code": 200, "response_ms": 335, "ok": true, "error": null}
+{"service_id": "wikipedia", "checked_at": "2026-10-01T02:21:25+00:00", "status_code": 200, "response_ms": 229, "ok": true, "error": null}
+{"service_id": "python", "checked_at": "2026-10-01T02:21:25+00:00", "status_code": 200, "response_ms": 150, "ok": true, "error": null}
+{"service_id": "openai", "checked_at": "2026-10-01T02:21:26+00:00", "status_code": 200, "response_ms": 197, "ok": true, "error": null}
