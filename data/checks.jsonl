@@ -1,13 +1,3 @@
-{"service_id": "google", "checked_at": "2026-10-15T05:14:44+00:00", "status_code": 200, "response_ms": 76, "ok": true, "error": null}
-{"service_id": "github", "checked_at": "2026-10-15T05:14:44+00:00", "status_code": 200, "response_ms": 317, "ok": true, "error": null}
-{"service_id": "wikipedia", "checked_at": "2026-10-15T05:14:44+00:00", "status_code": 200, "response_ms": 91, "ok": true, "error": null}
-{"service_id": "python", "checked_at": "2026-10-15T05:14:45+00:00", "status_code": 200, "response_ms": 64, "ok": true, "error": null}
-{"service_id": "openai", "checked_at": "2026-10-15T05:14:45+00:00", "status_code": 200, "response_ms": 123, "ok": true, "error": null}
-{"service_id": "google", "checked_at": "2026-10-15T10:01:06+00:00", "status_code": 200, "response_ms": 76, "ok": true, "error": null}
-{"service_id": "github", "checked_at": "2026-10-15T10:01:06+00:00", "status_code": 200, "response_ms": 31, "ok": true, "error": null}
-{"service_id": "wikipedia", "checked_at": "2026-10-15T10:01:07+00:00", "status_code": 200, "response_ms": 74, "ok": true, "error": null}
-{"service_id": "python", "checked_at": "2026-10-15T10:01:07+00:00", "status_code": 200, "response_ms": 93, "ok": true, "error": null}
-{"service_id": "openai", "checked_at": "2026-10-15T10:01:07+00:00", "status_code": 200, "response_ms": 122, "ok": true, "error": null}
 {"service_id": "google", "checked_at": "2026-10-15T14:52:44+00:00", "status_code": 200, "response_ms": 80, "ok": true, "error": null}
 {"service_id": "github", "checked_at": "2026-10-15T14:52:44+00:00", "status_code": 200, "response_ms": 328, "ok": true, "error": null}
 {"service_id": "wikipedia", "checked_at": "2026-10-15T14:52:45+00:00", "status_code": 200, "response_ms": 147, "ok": true, "error": null}
@@ -763,3 +753,8 @@
 {"service_id": "wikipedia", "checked_at": "2026-11-14T03:29:50+00:00", "status_code": 200, "response_ms": 189, "ok": true, "error": null}
 {"service_id": "python", "checked_at": "2026-11-14T03:29:50+00:00", "status_code": 200, "response_ms": 240, "ok": true, "error": null}
 {"service_id": "openai", "checked_at": "2026-11-14T03:29:50+00:00", "status_code": 200, "response_ms": 115, "ok": true, "error": null}
+{"service_id": "google", "checked_at": "2026-11-14T10:51:05+00:00", "status_code": 200, "response_ms": 120, "ok": true, "error": null}
+{"service_id": "github", "checked_at": "2026-11-14T10:51:05+00:00", "status_code": 200, "response_ms": 22, "ok": true, "error": null}
+{"service_id": "wikipedia", "checked_at": "2026-11-14T10:51:06+00:00", "status_code": 200, "response_ms": 24, "ok": true, "error": null}
+{"service_id": "python", "checked_at": "2026-11-14T10:51:06+00:00", "status_code": 200, "response_ms": 39, "ok": true, "error": null}
+{"service_id": "openai", "checked_at": "2026-11-14T10:51:06+00:00", "status_code": 403, "response_ms": 30, "ok": false, "error": null}
