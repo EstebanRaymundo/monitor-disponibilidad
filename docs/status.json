@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-20T17:13:23+00:00",
+  "generated_at": "2026-11-20T23:07:00+00:00",
   "services": [
     {
       "id": "google",
       "name": "Google",
       "url": "https://www.google.com",
       "current": "up",
-      "last_checked": "2026-11-20T17:13:22+00:00",
+      "last_checked": "2026-11-20T23:07:00+00:00",
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "avg_response_ms": 95,
+      "avg_response_ms": 114,
       "recent": [
         1,
         1,
@@ -78,10 +78,10 @@
       "name": "GitHub",
       "url": "https://github.com",
       "current": "up",
-      "last_checked": "2026-11-20T17:13:22+00:00",
+      "last_checked": "2026-11-20T23:07:00+00:00",
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "avg_response_ms": 133,
+      "avg_response_ms": 103,
       "recent": [
         1,
         1,
@@ -150,10 +150,10 @@
       "name": "Wikipedia",
       "url": "https://www.wikipedia.org",
       "current": "up",
-      "last_checked": "2026-11-20T17:13:22+00:00",
+      "last_checked": "2026-11-20T23:07:00+00:00",
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "avg_response_ms": 95,
+      "avg_response_ms": 90,
       "recent": [
         1,
         1,
@@ -222,10 +222,10 @@
       "name": "Python",
       "url": "https://www.python.org",
       "current": "up",
-      "last_checked": "2026-11-20T17:13:22+00:00",
+      "last_checked": "2026-11-20T23:07:00+00:00",
       "uptime_24h": 100.0,
       "uptime_7d": 100.0,
-      "avg_response_ms": 66,
+      "avg_response_ms": 52,
       "recent": [
         1,
         1,
@@ -293,11 +293,11 @@
       "id": "openai",
       "name": "OpenAI",
       "url": "https://openai.com",
-      "current": "down",
-      "last_checked": "2026-11-20T17:13:22+00:00",
-      "uptime_24h": 0.0,
+      "current": "up",
+      "last_checked": "2026-11-20T23:07:00+00:00",
+      "uptime_24h": 25.0,
       "uptime_7d": 11.54,
-      "avg_response_ms": null,
+      "avg_response_ms": 131,
       "recent": [
         1,
         1,
@@ -335,7 +335,6 @@
         1,
         1,
         1,
-        1,
         0,
         0,
         0,
@@ -358,7 +357,8 @@
         0,
         0,
         0,
-        0
+        0,
+        1
       ]
     }
   ]
